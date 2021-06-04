@@ -1,0 +1,140 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab 7 - Cars</title>
+    <link rel="stylesheet" href="./style.css">
+	<link href="https://fonts.googleapis.com/css?family=Aldrich|Arima+Madurai|Arvo|Henny+Penny|Indie+Flower|Libre+Baskerville|Pirata+One|Poiret+One|Sancreek|Satisfy|Share+Tech+Mono|Smokum|Snowburst+One|Special+Elite" rel="stylesheet">
+</head>
+<body>
+	<div> 
+		<text class='header' id = 'title' > A Look at the Most Profitable Movie Genres</text>
+	</div>
+
+    <div id="main" style = "text-align:center;">
+
+        <svg id = 'svg' width="1000" height="700" style="border: 1px solid #777;">
+        </svg>
+		
+			<form id = 'form'>
+
+				<br>
+				<br>
+				<br>
+				<br>
+				<label class = 'header'><b>Movie Genres</b></label>
+				<br>
+				<input type="checkbox" id="comedy" name="comedy" value="comedy" onclick = "onCategoryChanged()" checked>
+				<label for="comedy"> Comedy</label><br>
+	
+				<input type="checkbox" id="drama" name="Drama" value="drama" onclick = "onCategoryChanged()" checked>
+				<label for="drama">Drama</label><br>
+	
+				<input type="checkbox" id="romance" name="romance" value="romance" onclick = "onCategoryChanged()" checked>
+				<label for="romance">Romance</label><br>
+	
+				<input type="checkbox" id="bio" name="bio" value="bio" onclick = "onCategoryChanged()" checked>
+				<label for="bio">Biography</label><br>
+	
+				<input type="checkbox" id="sport" name="sport" value="sport" onclick = "onCategoryChanged()" checked>
+				<label for="sport">Sport</label><br>
+	
+				<input type="checkbox" id="action" name="action" value="action" onclick = "onCategoryChanged()" checked>
+				<label for="vehicle3">Action</label><br>
+	
+				<input type="checkbox" id="adv" name="adv" value="adv" onclick = "onCategoryChanged()" checked>
+				<label for="adv">Adventure</label><br>
+	
+				<input type="checkbox" id="hist" name="hist" value="hist" onclick = "onCategoryChanged()" checked>
+				<label for="hist">History</label><br>
+	
+				<input type="checkbox" id="war" name="war" value="war" onclick = "onCategoryChanged()" checked>
+				<label for="war">War</label><br>
+	
+				<input type="checkbox" id="horror" name="horror" value="horror" onclick = "onCategoryChanged()" checked>
+				<label for="horror">Horror</label><br>
+	
+				<input type="checkbox" id="myst" name="myst" value="myst" onclick = "onCategoryChanged()" checked>
+				<label for="myst">Mystery</label><br>
+	
+				<input type="checkbox" id="scifi" name="scifi" value="scifi" onclick = "onCategoryChanged()" checked>
+				<label for="scifi">Sci-Fi</label><br>
+
+				<input type="checkbox" id="thrill" name="thrill" value="thrill" onclick = "onCategoryChanged()" checked>
+				<label for="thrill">Thriller</label><br>
+
+				<input type="checkbox" id="crime" name="crime" value="crime" onclick = "onCategoryChanged()" checked>
+				<label for="crime">Crime</label><br>
+
+				<input type="checkbox" id="doc" name="doc" value="doc" onclick = "onCategoryChanged()" checked>
+				<label for="doc">Documentary</label><br>
+
+				<input type="checkbox" id="music" name="music" value="music" onclick = "onCategoryChanged()" checked>
+				<label for="music">Music</label><br>
+
+				<input type="checkbox" id="fantasy" name="fantasy" value="fantasy" onclick = "onCategoryChanged()" checked>
+				<label for="fantasy">Fantasy</label><br>
+
+				<input type="checkbox" id="west" name="west" value="west" onclick = "onCategoryChanged()" checked>
+				<label for="west">Western</label><br>
+
+				<input type="checkbox" id="musical" name="musical" value="musical" onclick = "onCategoryChanged()" checked>
+				<label for="musical">Musical</label><br>
+
+				<input type="checkbox" id="fam" name="fam" value="fam" onclick = "onCategoryChanged()" checked>
+				<label for="fam">Family</label><br>
+
+				<input type="checkbox" id="anim" name="anim" value="anim" onclick = "onCategoryChanged()" checked>
+				<label for="anim">Animation</label><br>
+			</form>
+
+			<!-- <h5>"+d['title']+"<h5> 
+				"<table>
+					<thead>
+						<tr>
+							<td>Box Office</td>
+							<td>Director</td>
+							<td>Genre</td>
+							<td>IMDB Score</td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>"+d['profit']+"</td>
+							<td>'+(d['director]'</td>
+							<td>'+d['genres]+'</td>
+							<td>`+d['imdb']+`</td>
+						</tr>
+					</tbody>
+				</table>" -->
+				
+					<!-- <thead>
+						<tr>
+							<td>Undergrad Population</td>
+							<td>Retention Rate</td>
+							<td>Median Debt</td>
+							<td>Mean Earnings</td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>`+d['undergrad_population']+`</td>
+							<td>`+(d['retention_rate']*100).toFixed(2)+`%</td>
+							<td>$`+Math.round(d['median_debt'])+`</td>
+							<td>$`+Math.round(d['median_earnings_after_8years'])+`</td>
+						</tr>
+					</tbody>
+				</table>" -->
+
+			<div id = 'description'> 
+				<text class = 'header' > 
+					Hover on dots for more information, zoom and pan on the chart for a closer
+					look, and filter by genre using the checkboxes.
+				</text>
+			</div>
+    </div>
+</body>
+<script src="//d3js.org/d3.v5.min.js"></script>
+<script src="./d3-tip.js"></script>
+<script src="./main.js"></script>
+</html>
